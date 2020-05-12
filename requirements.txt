@@ -1,0 +1,7 @@
+numpy
+torch
+torchvision
+tqdm
+pytorch_toolbelt
+cv2
+pandas

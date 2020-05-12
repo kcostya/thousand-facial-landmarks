@@ -1,3 +1,7 @@
+##Thousand Facial Landmarks Competition Solution within MADE Computer Vision course
+### Predict 971 facial points for VGG dataset. 
+https://www.kaggle.com/c/made-thousand-facial-landmarks
+
 ### General Approach
 * Warm-up with `OneCycleLR` policy and `SGD`
 * Further training with `CosineAnnealingWarmRestarts` and `AdamW` with adaptive learning rates by layer
@@ -6,7 +10,7 @@
 * Simple blend with another resnet50 model
 
 
-### Basic Config
+### Config
 * CROP_SIZE = 128
 * backbone = resnet50
 * batch size = 32
@@ -35,6 +39,13 @@
 ```
 
 ### Run
+```pip install -r requirements.txt```
+
 ```python train.py --name "baseline" --data "PATH_TO_DATA" [--gpu]```
 
 Basic blending example is available within `blender.ipynb` [notebook](blender.ipynb)
+
+### Results
+![results](images/submission.png)
+
+![leaderboard](images/lb.png)
