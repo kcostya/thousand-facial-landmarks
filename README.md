@@ -37,4 +37,4 @@
 ### Run
 ```python train.py --name "baseline" --data "PATH_TO_DATA" [--gpu]```
 
-Basic blending example is available within `blender.ipynb` [notebook](`blender.ipynb`)
+Basic blending example is available within `blender.ipynb` [notebook](blender.ipynb)
