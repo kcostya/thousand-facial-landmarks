@@ -1,6 +1,8 @@
-##Thousand Facial Landmarks Competition Solution within MADE Computer Vision course
+## Thousand Facial Landmarks Competition Solution within MADE Computer Vision Course
 ### Predict 971 facial points for VGG dataset. 
 https://www.kaggle.com/c/made-thousand-facial-landmarks
+
+![faces](images/faces.png)
 
 ### General Approach
 * Warm-up with `OneCycleLR` policy and `SGD`
