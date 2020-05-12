@@ -7,8 +7,10 @@ https://www.kaggle.com/c/made-thousand-facial-landmarks
 ### General Approach
 * Warm-up with `OneCycleLR` policy and `SGD`
 * Further training with `CosineAnnealingWarmRestarts` and `AdamW` with adaptive learning rates by layer
-* Wing Loss
+* Wing Loss from [pytorch-toolbelt](https://github.com/BloodAxe/pytorch-toolbelt)
 * ImageNet normalization
+* No weight decay for bias and batchnorm 
+(["Bag of Tricks for Image Classification with Convolutional Neural Networks"](https://arxiv.org/abs/1812.01187))
 * Simple blend with another resnet50 model
 
 
@@ -22,7 +24,7 @@ https://www.kaggle.com/c/made-thousand-facial-landmarks
 * OneCycle_max_lr = 0.1
 * WingLoss_width = 10
 * WingLoss_curvature = 2
-* AdamW_weight_decay = 1e-06
+* AdamW_weight_decay = 1e-06 
 * AdamW_amsgrad = True
 * Adaptive learning rates:
 ```
