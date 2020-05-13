@@ -5,13 +5,14 @@ https://www.kaggle.com/c/made-thousand-facial-landmarks
 ![faces](images/faces.png)
 
 ### General Approach
+* ResNet50 backbone with fully connected layer changed
+* 128 px crops and ImageNet normalization
 * Warm-up with `OneCycleLR` policy and `SGD`
-* Further training with `CosineAnnealingWarmRestarts` and `AdamW` with adaptive learning rates by layer
+* Further training with `CosineAnnealingWarmRestarts` and `AdamW` with adaptive learning rates by layer groups
 * Wing Loss from [pytorch-toolbelt](https://github.com/BloodAxe/pytorch-toolbelt)
-* ImageNet normalization
 * No weight decay for bias and batchnorm 
 (["Bag of Tricks for Image Classification with Convolutional Neural Networks"](https://arxiv.org/abs/1812.01187))
-* Simple blend with another resnet50 model
+* Final solution is simple blend with another ResNet50 model
 
 
 ### Config
